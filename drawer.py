@@ -1,6 +1,6 @@
 import pyperclip
 
-from mechanize import Browser, BrowserStateError, _response
+from mechanize import Browser, BrowserStateError
 from datetime import datetime
 
 TEMPLATE = (
@@ -16,8 +16,7 @@ def get_title(url):
 
 
 if __name__ == '__main__':
-    # url = input('Enter the link: ')
-    url = ''
+    url = input('Enter the link: ')
 
     try:
         title = get_title(url)
@@ -28,7 +27,6 @@ if __name__ == '__main__':
         if '403' in str(e):
             print("HTTP Error 403")
         title = '"enter your title"'
-
 
     result = TEMPLATE.format(
         title=title, url=url, date=datetime.now().strftime('%d.%m.%Y')
