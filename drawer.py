@@ -3,9 +3,11 @@ import pyperclip
 from mechanize import Browser, BrowserStateError
 from datetime import datetime
 
+# Правительство Российской Федерации: официальный сайт. – Москва. – URL: http://government.ru (дата обращения: 19.02.2020). – Текст: электронный.
+# История России, всемирная история: сайт. – URL: http://www.istorya.ru (дата обращения: 15.10.2019). – Текст: электронный.
+
 TEMPLATE = (
-    '{title} [Электронный ресурс] – Заглавие с экрана. – Режим доступа: {url}.'
-    ' (Дата обращения: {date}).'
+    '{title}. – URL: {url} (дата обращения: {date}). – Текст: электронный.'
 )
 
 
